@@ -1,0 +1,7 @@
+{
+  "name": "tempordo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
