@@ -14,9 +14,17 @@ export class Schedule{
   }
 }
 
+export enum ScheduleSectionType{
+  Day,
+  Week,
+  Month
+}
+
 export class ScheduleSection{
   public start:Date;
   public end:Date;
+
+  public type:ScheduleSectionType = ScheduleSectionType.Day;
 
   public entries:ScheduleEntry[] = [];
 
@@ -24,6 +32,11 @@ export class ScheduleSection{
     this.start = start;
     this.end = end;
     this.entries = entries;
+  }
+
+  public setType(type:ScheduleSectionType){
+    this.type = type;
+    return this;
   }
 }
 
@@ -67,7 +80,7 @@ export class PlannerService {
         new ScheduleEntry("Récupérer voiture garage", new Date("2025/04/22 18:00:00"), new Date("2025/04/22 18:00:00")),
         new ScheduleEntry("Diner amis", new Date("2025/04/25 20:00:00"), new Date("2025/04/26 00:00:00")),
       ]
-    ),
+    ).setType(ScheduleSectionType.Week),
     new ScheduleSection(
       new Date("2025/04/28 00:00:00"),
       new Date("2025/05/04 23:59:59"),
@@ -75,14 +88,14 @@ export class PlannerService {
         new ScheduleEntry("Déclaration impôts", new Date("2025/04/30 00:00:00"), new Date("2025/04/30 23:59:59")).setDayTask(true),
         new ScheduleEntry("RDV médecin", new Date("2025/04/30 14:30:00"), new Date("2025/04/30 14:45:00")),
       ]
-    ),
+    ).setType(ScheduleSectionType.Week),
     new ScheduleSection(
       new Date("2025/05/05 00:00:00"),
       new Date("2025/06/02 23:59:59"),
       [
         new ScheduleEntry("Anniversaire maman", new Date("2025/05/06 00:00:00"), new Date("2025/05/06 23:59:59")).setDayTask(true)
       ]
-    )
+    ).setType(ScheduleSectionType.Month)
   ));
 
   constructor() { }

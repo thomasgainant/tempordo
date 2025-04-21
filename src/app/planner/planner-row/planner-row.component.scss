@@ -10,11 +10,16 @@
     display: block;
 
     position: absolute;
+
+    writing-mode: vertical-lr;
+    font-size: 1.25rem;
   }
   .planner-row-container .planner-entry.day-task{
     bottom: 0;
 
     background: var(--ion-color-warning);
+    writing-mode: horizontal-tb;
+    font-size: 1.1rem;
   }
   .planner-row-container .planner-entry.planner-division{
     background: none;
