@@ -1,0 +1,3 @@
+<div class="planner-row-container" #rowContainer>
+  <div planner-entry [class]="'planner-entry' + (entry.dayTask ? ' day-task ': '')" *ngFor="let entry of section.entries" [parent]="section" [entry]="entry" [container]="rowContainer"></div>
+</div>

@@ -1,0 +1,23 @@
+#planner{
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  width: 100%;
+}
+
+  #planner .planner-row{
+    flex-grow: 1;
+  }
+
+  .planner-row.current-week .planner-entry{
+    background: var(--very-important);
+  }
+
+  .planner-row.next-week .planner-entry{
+    background: var(--important);
+  }
+
+  .planner-row.next-month .planner-entry{
+    background: var(--less-important);
+  }

@@ -1,0 +1,18 @@
+.planner-row-container{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+
+  position: relative;
+}
+
+  .planner-row-container .planner-entry{
+    display: block;
+
+    position: absolute;
+  }
+  .planner-row-container .planner-entry.day-task{
+    bottom: 0;
+
+    background: var(--ion-color-warning);
+  }

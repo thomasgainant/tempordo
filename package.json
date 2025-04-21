@@ -27,10 +27,18 @@
     "@capacitor/keyboard": "7.0.1",
     "@capacitor/status-bar": "7.0.1",
     "@ionic/angular": "^8.0.0",
+    "brain.js": "^2.0.0-beta.24",
     "ionicons": "^7.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
+  },
+  "overrides": {
+    "brain.js": {
+      "gpu.js": {
+        "gl": "^8.1.6"
+      }
+    }
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^19.0.0",
