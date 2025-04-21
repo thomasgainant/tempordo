@@ -1,4 +1,5 @@
 <div id="planner">
+  <div planner-row class="planner-row current-day" [section]="plannerService.schedule().currentDay"></div>
   <div planner-row class="planner-row current-week" [section]="plannerService.schedule().currentWeek"></div>
   <div planner-row class="planner-row next-week" [section]="plannerService.schedule().nextWeek"></div>
   <div planner-row class="planner-row next-month"[section]="plannerService.schedule().nextMonth"></div>

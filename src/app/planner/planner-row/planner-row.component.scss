@@ -16,3 +16,8 @@
 
     background: var(--ion-color-warning);
   }
+  .planner-row-container .planner-entry.planner-division{
+    background: none;
+    border-left: #333 1px dotted;
+    opacity: 0.3;
+  }

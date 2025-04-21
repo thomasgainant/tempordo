@@ -9,15 +9,27 @@
   #planner .planner-row{
     flex-grow: 1;
   }
-
-  .planner-row.current-week .planner-entry{
-    background: var(--very-important);
+  .planner-row.current-day{
+    background: #ddd;
+  }
+  .planner-row.current-week{
+    background: var(--white);
+  }
+  .planner-row.next-week{
+    background: #d3d3d3;
+  }
+  .planner-row.next-month{
+    background: #cccccc;
   }
 
-  .planner-row.next-week .planner-entry{
-    background: var(--important);
-  }
+  .planner-row.current-day .planner-entry, .planner-row.current-week .planner-entry{
+      background: var(--very-important);
+    }
 
-  .planner-row.next-month .planner-entry{
-    background: var(--less-important);
-  }
+    .planner-row.next-week .planner-entry{
+      background: var(--important);
+    }
+
+    .planner-row.next-month .planner-entry{
+      background: var(--less-important);
+    }

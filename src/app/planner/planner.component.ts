@@ -16,18 +16,4 @@ export class PlannerComponent  implements OnInit {
 
   ngOnInit() {}
 
-  static getLength(start:Date, end:Date):number{
-    return end.getTime() - start.getTime();
-  }
-
-  static getPercentLength(start:Date, end:Date, totalLength:number){
-    let length = PlannerComponent.getLength(start, end);
-    return length/totalLength;
-  }
-
-  static getPercentOnLength(start:Date, end:Date, point:Date){
-    let length = PlannerComponent.getLength(start, end);
-    return (point.getTime()-start.getTime())/length;
-  }
-
 }
